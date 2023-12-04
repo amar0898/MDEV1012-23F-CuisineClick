@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="6dp"
+        app:cardCornerRadius="15dp"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="67dp"
+                android:layout_weight="1.5"
+                app:cardCornerRadius="8dp"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/cartImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logon" />
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.3"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/cartFoodName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Food Name"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:id="@+id/cartItemPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/lato_black"
+                    android:text="TextView"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/text_green"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:paddingEnd="10dp"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:id="@+id/plusButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/text_shadow_white"
+                    android:src="@drawable/add" />
+
+                <TextView
+                    android:id="@+id/cartItemQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="1" />
+
+                <ImageButton
+                    android:id="@+id/deleteButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/text_shadow_white"
+                    android:src="@drawable/delete"
+                    />
+
+                <ImageButton
+                    android:visibility="gone"
+                    android:id="@+id/minusButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/text_shadow_white"
+                    android:src="@drawable/minus"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
